@@ -16,7 +16,6 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   
   <link rel="canonical" href="http://nvd3.org//examples/line.html">
   <link href="/favicon.png" rel="icon">
@@ -55,23 +54,6 @@
   font-size: 18px;
   line-height: 1.5em;
   }
-
-  body > .container {
-  width: 941px;
-  }
-
-  @media(min-width: 1200px){
-  body > .container {
-  width: 1171px;
-  }
-  }
-
-  @media (max-width: 979px) and (min-width: 768px) {
-  body > .container {
-  width: 725px;
-  }
-  }
-
 </style>
 <link href="assets/css/common.css" rel="stylesheet">
 <link href="assets/css/nv.d3.css" rel="stylesheet">
@@ -82,29 +64,19 @@
 </head>
 
 <body >
-  <div class="container with-3d-shadow with-transitions">
+  <div class="container-fluid with-3d-shadow with-transitions">
     <!-- Main hero unit for a primary marketing message or call to action -->
-    <div class="row">
 
-      <div class="span9">
         <h2 id='line_chart'>Non-copepods abundance anomaly scorecard - Scotian Shelf</h2>
 	<p>
 	  Annual anomaly scorecard for non-copepod group abundances on the Scotian Shelf sections. The Y values are anomalies from the mean for the reference period,
-	  1999-2010, in standard deviation (sd) units (mean and sd listed below).
+	  1999-2016, in standard deviation (sd) units (mean and sd listed below).
 
-	  <a href="http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/azmp-pmza/document-data-donnees-documents/data/pdf/CSAS_2018_017_figure_30_en.pdf">Read more...</a>
+	  <a href="http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/azmp-pmza/document-data-donnees-documents/data/pdf/CSAS_2018_017_figure_30_en.pdf">Read more at DFO...</a>
 	</p>
 
-
-	<div id='chart'>
-	  <svg style='height:500px'> </svg>
-	</div><script src='noncopepods.js' type='text/javascript'> </script>
-
-
-      </div>
-    </div>
-
-    <div>
+    <div class="row">
+    <div class="span3">
       <table border="0" cellspacing="2">
        <tr>
           <th>Organism	  </th>
@@ -151,6 +123,14 @@
           <td>0.7	  </td>
           <td>0.2	  </td> </tr>
       </table>
+    </div>
+
+    <div class="span9">
+      <div  id='chart'>
+      <svg  class="img-responsive center-block"  style='height:500px'> </svg>
+      <script src='noncopepods.js' type='text/javascript'> </script>
+      </div>
+    </div>
     </div>
 
     <div id="cite">Data Source: DFO Canadian Science Advisory Secretariat,
